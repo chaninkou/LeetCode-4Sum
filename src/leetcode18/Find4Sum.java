@@ -5,8 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Find4Sum {
+	// Time O(N^(K-1)) 
     public List<List<Integer>> fourSum(int[] nums, int target) {
         Arrays.sort(nums);
+        
         return kSum(nums, 0, 4, target);
     }
     
