@@ -17,7 +17,7 @@ public class Find4Sum {
         
         List<List<Integer>> res = new ArrayList<List<Integer>>();
         
-        // Lower down k until find 2 sum with one target
+        // Keep recursive until k = 2 to do 2 sum
         if(k == 2) {
             int left = start;
             int right = len - 1;
@@ -57,7 +57,7 @@ public class Find4Sum {
                 
                 List<List<Integer>> temp = kSum(nums, i + 1, k - 1, target - nums[i]);
                 
-                // Add to beginning
+                // Add current nums[i] into the array to match current k
                 for(List<Integer> t : temp) {
                    t.add(0, nums[i]);
                 }                    
