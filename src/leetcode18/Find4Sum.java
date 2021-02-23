@@ -57,7 +57,7 @@ public class Find4Sum {
                 
                 List<List<Integer>> temp = kSum(nums, i + 1, k - 1, target - nums[i]);
                 
-                // Add current nums[i] into the array to match current k, this is after 2sum
+                // Add current nums[i] into the array to match current k, this is after ksum method.
                 for(List<Integer> t : temp) {
                    t.add(0, nums[i]);
                 }                    
